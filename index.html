@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek Nayaka | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" style="position: fixed">
+        <div class="logo">
+          <!-- SVG Logo with Fixed Width -->
+          <svg
+            width="250"
+            height="50"
+            viewBox="0 0 250 50"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <text
+              x="0"
+              y="35"
+              font-size="30"
+              font-weight="bold"
+              fill="currentColor"
+            >
+              Abhishek Nayaka
+            </text>
+          </svg>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button id="theme-toggle">🌙</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <img
+        src="../assets/Hero.svg"
+        height="886px"
+        width="470px"
+        style="padding-right: 80px"
+      />
+      <div>
+        <h1>Hi, I'm <span>Abhishek Nayaka</span></h1>
+        <p>A Frontend Developer creating beautiful web experiences.</p>
+        <a href="#projects" class="btn">View Projects</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div id="aboutdes">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm Sanjay, a frontend web developer fueled by a passion for
+          creating beautiful and functional web experiences. With a toolkit that
+          includes HTML, CSS, JavaScript, and React.js, <br />I'm dedicated to
+          clean code, pixel-perfect design, and delivering exceptional user
+          interfaces. I graduated with a BE in Computer Science Engineering from
+          Mysore district in 2022, and I have a year and a half of experience in
+          the Relevance Lab as a Service Desk Engineer/IT Support. I'm
+          constantly exploring new technologies and approaches to stay at the
+          forefront of web development
+        </p>
+      </div>
+      <img
+        src="../assets/Abhishek yit.jpg"
+        height="200px"
+        width="200px"
+        style="padding-right: 70px"
+      />
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React.js</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A modern portfolio showcasing my work.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
