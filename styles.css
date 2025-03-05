@@ -30,7 +30,7 @@ body {
 }
 
 .dark-mode .nav-links a:hover {
-  color: #ffcc00;
+  color: #fc3d23;;
 }
 
 /* Navigation Bar */
@@ -64,7 +64,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ffcc00;
+  color: #fc3d23;;
 }
 
 /* Fix SVG Logo */
@@ -155,15 +155,15 @@ form button {
 }
 
 form button {
-  background: #ffcc00;
-  color: black;
+  background: #fc3d23;;
+  color: white;
   border: none;
   cursor: pointer;
   transition: 0.3s;
 }
 
 form button:hover {
-  background: #ffa500;
+  background: #cc7d73;;
 }
 
 /* Responsive Design */
@@ -176,3 +176,42 @@ form button:hover {
     display: flex;
   }
 }
+.image{
+  border-radius: 50%;
+}
+
+
+  .skill-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* Individual Skill Card */
+  .skill-card {
+    background: white;
+    border: 2px solid black;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    justify-content: center;
+  }
+  
+ skill-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .skill-card p {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+
+
