@@ -47,3 +47,46 @@ document.addEventListener('DOMContentLoaded', () => {
     alert('Your message has been sent!');
   });
 });
+
+
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   emailjs.init("9Vltul0Ls8DGE8MnW"); // Replace with your EmailJS Public Key
+
+//   document.getElementById('contact-form').addEventListener('submit', function(event) {
+//     event.preventDefault();
+
+//     const name = document.getElementById("name").value;
+//     const email = document.getElementById("email").value;
+//     const message = document.getElementById("message").value;
+
+//     const formData = {
+//       name: name,
+//       email: email,
+//       message: message
+//     };
+
+//     emailjs.send("service_67dxvso", "template_6gbur1y", formData)
+//       .then(response => {
+//         alert("Your message has been sent successfully!");
+//         document.getElementById("contact-form").reset(); // Reset form
+//       })
+//       .catch(error => {
+//         console.error("Error:", error);
+//         alert("Failed to send message. Please try again later.");
+//       });
+//   });
+// });
+
+
+
+// function sendMail(){
+//   let parms = {
+//     name : document.getElementById("name").value ,
+//     email : document .getElementById ("email").value ,
+//     message : document .getElementById ("message").value 
+//   }
+
+//   emailjs.send ("service_67dxvso" ,"template_dnydtac" ,parms).then(alert("email sent succsessfull"))
+// }
