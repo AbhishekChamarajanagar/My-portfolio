@@ -7,6 +7,7 @@ body {
   background: linear-gradient(135deg, #1e1e1e, #222831);
   color: white;
   overflow-x: hidden; /* Prevents horizontal scrolling */
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* Light & Dark Theme */
@@ -18,6 +19,10 @@ body {
 .dark-mode {
   background: linear-gradient(135deg, #ffffff, #dddddd);
   color: black;
+  
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+
 }
 
 .dark-mode .navbar {
@@ -26,18 +31,25 @@ body {
 
 /* Ensure navbar links are visible in light mode */
 .dark-mode .nav-links a {
-  color: black; /* Fixes invisible text issue */
+  color: black;
 }
 
 .dark-mode .nav-links a:hover {
-  color: #fc3d23;;
+  color: #fc3d23;
+}
+.theme-toggle {
+  transition: transform 0.3s ease-in-out;
+}
+
+.dark-mode .theme-toggle {
+  transform: rotate(180deg);
 }
 
 /* Navigation Bar */
 .navbar {
-  width: 100vw; /* Full width */
-  box-sizing: border-box; /* Prevents extra padding issues */
-  overflow: hidden; /* Fixes unwanted horizontal scroll */
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,6 +59,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  
 }
 
 /* Navigation Links */
@@ -64,24 +77,47 @@ body {
 }
 
 .nav-links a:hover {
-  color: #fc3d23;;
+  color: #fc3d23;
+}
+nav a {
+  position: relative;
+  padding: 10px;
+  transition: color 0.3s ease;
+  margin: 0 15px;
+}
+button {
+  box-shadow: 0px 4px 10px rgba(255, 69, 58, 0.5);
 }
 
-/* Fix SVG Logo */
-.logo svg {
-  max-width: 100%;
-  display: block; /* Prevents inline spacing issues */
-  white-space: nowrap;
+
+nav a:hover, nav a.active {
+  color: #ff4d4d;
 }
 
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #ff4d4d;
+  transition: all 0.3s ease;
+}
+
+nav a:hover::after, nav a.active::after {
+  width: 100%;
+  left: 0;
+}
 /* Hero Section */
 #hero {
   text-align: center;
-  padding: 70px 20px;
+  padding: 70px 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70vh;
+  
 }
 
 #hero h1 {
@@ -91,18 +127,40 @@ body {
 #hero span {
   color: #fc3d23;
 }
+
+/* About Section */
 #about {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#aboutdes {
-  width: 55%;
-  text-align: left;
-  padding-left: 70px;
-  line-height: 1.6;
+  align-items: center; /* Aligns text and image */
+  justify-content: space-between; /* Distributes text and image nicely */
+  max-width: 80%; /* Prevents content from stretching too much */
+  margin: 0 auto; /* Centers the whole section */
+  padding: 40px 0; /* Adds some vertical spacing */
+  gap: 50px; /* Increases spacing between text and image */
 }
 
+#aboutdes {
+  flex: 1;
+  max-width: 60%; /* Ensures text takes up enough space */
+  text-align: justify;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+  line-height: 30px;
+}
+#aboutdes p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px; /* Space between paragraphs */
+}
+
+.image {
+  width: 220px; /* Adjust image size */
+  height: auto;
+  border-radius: 15px; /* Rounded corners */
+}
+
+
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -111,11 +169,14 @@ body {
   text-decoration: none;
   font-weight: bold;
   border-radius: 25px;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(255, 83, 83, 0.3);
 }
 
 .btn:hover {
   background: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 83, 83, 0.5);
 }
 
 /* Sections */
@@ -125,12 +186,42 @@ section {
 }
 
 /* Skills */
-.skill-list span {
-  display: inline-block;
-  padding: 8px 15px;
-  background: rgba(255, 255, 255, 0.2);
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.skill-card {
+  background: white;
+  border: 2px solid black;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: center;
   border-radius: 10px;
-  margin: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
 }
 
 /* Projects */
@@ -143,6 +234,7 @@ section {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Contact Form */
 .contact-section {
   width: 100%;
   max-width: 40rem;
@@ -172,12 +264,15 @@ section {
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 .form-label {
-  margin-bottom: 0.5rem;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  transition: all 0.3s ease;
+  color: #aaa;
 }
 
 .form-input,
@@ -190,6 +285,7 @@ section {
   border-radius: 0.375rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  transition: all 0.3s ease;
 }
 
 .form-input::placeholder,
@@ -197,14 +293,24 @@ section {
   color: #6b7280;
 }
 
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label +.form-textarea {
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: #2563eb;
+}
+
 .form-input:focus-visible,
 .form-textarea:focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
+  
 }
 
 .form-textarea {
   min-height: 120px;
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
 }
 
 .form-submit {
@@ -214,56 +320,36 @@ section {
   color: #fff;
   padding: 13px 5px;
   border-radius: 0.375rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.form-submit:hover {
+  background-color: #1d1cb5;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .nav-links {
     flex-direction: column;
     display: none;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
   }
+
   .nav-links.active {
     display: flex;
   }
-}
-.image{
-  border-radius: 50%;
-}
 
-
-  .skill-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    max-width: 900px;
-    margin: auto;
-  }
   
-  /* Individual Skill Card */
-  .skill-card {
-    background: white;
-    border: 2px solid black;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.3s ease;
-    justify-content: center;
-  }
   
- skill-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-  }
-  
-  .skill-card p {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-#skills  p {
-color: #000000;
 }
-
-

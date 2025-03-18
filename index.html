@@ -1,14 +1,3 @@
-html
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,25 +5,14 @@ html
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abhishek Nayaka | Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   </head>
   <body>
     <header>
       <nav class="navbar" style="position: fixed">
         <div class="logo">
-          <!-- SVG Logo with Fixed Width -->
-          <svg
-            width="250"
-            height="50"
-            viewBox="0 0 250 50"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <text
-              x="0"
-              y="35"
-              font-size="30"
-              font-weight="bold"
-              fill="currentColor"
-            >
+          <svg width="250" height="50" viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="35" font-size="30" font-weight="bold" fill="currentColor">
               Abhishek Nayaka
             </text>
           </svg>
@@ -43,21 +21,14 @@ html
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li>
-            <button id="theme-toggle">🌙</button>
-          </li>
+          <li><a href="#contact-section">Contact</a></li>
+          <li><button id="theme-toggle">🌙</button></li>
         </ul>
       </nav>
     </header>
 
-    <section id="hero">
-      <img
-        src="../assets/Hero.svg"
-        height="886px"
-        width="470px"
-        style="padding-right: 80px"
-      />
+    <section id="hero" data-aos="fade-up">
+      <img src="../assets/Hero.svg" height="886px" width="520px" style="padding-right: 100px" />
       <div>
         <h1>Hi, I'm <span>Abhishek Nayaka</span></h1>
         <p>A Frontend Developer creating beautiful web experiences.</p>
@@ -65,66 +36,50 @@ html
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" data-aos="fade-right">
       <div id="aboutdes">
         <h2>About Me</h2>
         <p>
           Hello! I'm Sanjay, a frontend web developer fueled by a passion for
           creating beautiful and functional web experiences. With a toolkit that
-          includes HTML, CSS, JavaScript, and React.js, <br />I'm dedicated to
+          includes HTML, CSS, JavaScript, and React.js, </p>
+          <P>I'm dedicated to
           clean code, pixel-perfect design, and delivering exceptional user
           interfaces. I graduated with a BE in Computer Science Engineering from
           Mysore district in 2022, and I have a year and a half of experience in
-          the Relevance Lab as a Service Desk Engineer/IT Support. I'm
+          the Relevance Lab as a Service Desk Engineer/IT Support.</P>
+          <P> I'm
           constantly exploring new technologies and approaches to stay at the
           forefront of web development
+
         </p>
       </div>
-      <img class="image"
-        src="../assets/Abhishek yit.jpg"
-        height="200px"
-        width="200px"
-        style="padding-right: 100px "
-      />
+      <img class="image" src="../assets/Abhishek yit.jpg"  />
     </section>
 
-    <section id="skills">
+    <section id="skills" data-aos="zoom-in">
       <h2>Skills</h2>
       <div class="skill-list">
         <div class="skill-card">
           <img src="./assets/icon-git.svg" alt="">
-
           <p>Git</p>
-
-    
         </div>
         <div class="skill-card">
           <img src="./assets/icon-javscript.svg" alt="">
-
           <p>JavaScript</p>
-
-    
-          
         </div>
         <div class="skill-card">
-          <img src="./assets/css.svg" alt=""height="55px"width="50px">
-
-          <p>Css</p>
-
-    
+          <img src="./assets/css.svg" alt="">
+          <p>CSS</p>
         </div>
-
         <div class="skill-card">
-          <img src="./assets/html.svg" alt=""height="55px"width="50px">
-
-          <p>Html</p>
-
-    
+          <img src="./assets/html.svg" alt="">
+          <p>HTML</p>
         </div>
       </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
       <h2>Projects</h2>
       <div class="project-card">
         <h3>Portfolio Website</h3>
@@ -132,44 +87,55 @@ html
       </div>
     </section>
 
-    <section class="contact-section">
-      <div class="contact-intro">
-        <h2 class="contact-title">Get in Touch</h2>
-        <p class="contact-description">
-          Fill out the form below and we'll get back to you as soon as possible.
-        </p>
+
+    <!-- 
+    This is a working contact form. To receive email, 
+    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+
+    Create Access Key here 👉 https://web3forms.com/
+ -->
+
+<section class="contact-section">
+  <div class="contact-intro">
+    <h2 class="contact-title">Get in Touch</h2>
+    <p class="contact-description">
+      Fill out the form below and we'll get back to you as soon as possible.
+    </p>
+  </div>
+
+<form  action="https://formsubmit.co/abhisheknayak2341@gmail.com" method="POST" >
+        
+   
+
+    <div class="form-group-container">
+      <div class="form-group">
+        
+        <input id="name" class="form-input" placeholder="Enter your name" type="text" />
       </div>
+      <div class="form-group">
+        
+        <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+      </div>
+      <div class="form-group">
+        <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+      </div>
+      <div class="form-group">
+        <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+      </div>
+    </div>
+    <button class="form-submit" type="submit">Send Message</button>
+  </form>
+
+</section>
+
     
-      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-    
-        <input type="hidden" name="access_key" value="9498dda6-197e-44de-922f-0f258a5db6da" />
-        <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
-        <input type="hidden" name="from_name" value="My Website" />
-        <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
-    
-        <div class="form-group-container">
-          <div class="form-group">
-            <label for="name" class="form-label">Name</label>
-            <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
-          </div>
-          <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
-          </div>
-          <div class="form-group">
-            <label for="phone" class="form-label">Phone</label>
-            <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
-          </div>
-          <div class="form-group">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
-          </div>
-        </div>
-        <button class="form-submit" type="submit">Send Message</button>
-      </form>
-    
-    </section>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
-</html>
+</html>    
+
+
