@@ -87,3 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //   emailjs.send ("service_67dxvso" ,"template_dnydtac" ,parms).then(alert("email sent succsessfull"))
 // }
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}

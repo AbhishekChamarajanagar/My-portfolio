@@ -450,7 +450,7 @@ h1 {
 
 
 .resume-btn {
-  background: #f1e3df;
+  background: #f08063;
   color: rgb(255, 252, 252);
   padding: 8px 15px;
   border-radius: 5px;
@@ -463,15 +463,34 @@ h1 {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(255, 83, 83, 0.5);
 }
-@media (max-width: 768px) {  
-  .navbar {  
-    flex-direction: column; /* Stack navbar items vertically */  
-  }  
-  .hero-section {  
-    flex-direction: column; /* Stack image and text vertically */  
-    text-align: center;  
-  }  
-  .hero-image {  
-    width: 80%; /* Adjust image size for mobile */  
-  }  
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    text-align: center;
+    background: rgba(19, 19, 19, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
 }
