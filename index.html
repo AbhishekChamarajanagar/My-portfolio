@@ -6,6 +6,12 @@
     <title>Abhishek Nayaka | Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script>
+      function toggleMenu() {
+        let navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("active");
+    }
+      </script>
     
   </head>
   <body>
@@ -14,23 +20,26 @@
         <div class="logo">
           <svg width="250" height="50" viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
             <text x="0" y="35" font-size="30" font-weight="bold" fill="currentColor">
-              Abhishek Nayaka
+              Abhishek Nayaka K S
             </text>
           </svg>
         </div>
         
         <!-- Hamburger Menu Icon -->
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-        
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="./assets/AbhishekNayakaKS3.pdf" target="_blank" class="resume-btn">Resume</a></li>
-          <li><button id="theme-toggle">🌙</button></li>
-        </ul>
+      
+          <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      
+          <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="./assets/AbhishekNayakaKS3.pdf" target="_blank" class="resume-btn">Resume</a></li>
+              <li><button id="theme-toggle">🌙</button></li>
+          </ul>
       </nav>
+      
+      
     </header>
     
 
