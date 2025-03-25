@@ -6,6 +6,7 @@
     <title>Abhishek Nayaka | Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
   </head>
   <body>
     <header>
@@ -21,7 +22,9 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact-section">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="./assets/AbhishekNayakaKS3.pdf" target="_blank" class="resume-btn">Resume</a></li>
+
           <li><button id="theme-toggle">🌙</button></li>
         </ul>
       </nav>
@@ -29,23 +32,37 @@
 
     <section id="hero" data-aos="fade-up">
       <img src="../assets/Hero.svg" height="886px" width="520px" style="padding-right: 100px" />
-      <div>
-        <h1>Hi, I'm <span>Abhishek Nayaka</span></h1>
-        <p>A Frontend Developer creating beautiful web experiences.</p>
+      <div class="hero-content">
+        <h1 class="Abhi1">Hi, I'm <span>Abhishek Nayaka</span></h1>
+        <p class="abhi">A Frontend Developer creating beautiful web experiences.</p>
         <a href="#projects" class="btn">View Projects</a>
-      </div>
+        
+        <div class="social-buttons">
+            <a href="https://www.linkedin.com/in/abhishek-nayaka-k-s-9a102225b" target="_blank" class="icon-box">
+                <img src="./assets/linkedin.svg" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://github.com/AbhishekChamarajanagar" target="_blank" class="icon-box">
+                <img src="./assets/github.svg" alt="GitHub" class="icon">
+            </a>
+            <a href="https://wa.me/6360340277" target="_blank" class="icon-box">
+              <img src="./assets/whatsapp.svg" alt="WhatsApp" class="icon">
+          </a>
+        </div>
+    </div>
+      
+      
     </section>
+    
 
     <section id="about" data-aos="fade-right">
       <div id="aboutdes">
         <h2>About Me</h2>
         <p>
-          Hello! I'm Sanjay, a frontend web developer fueled by a passion for
+          Hello! I'm Abhishek Nayaka K S, a frontend web developer fueled by a passion for
           creating beautiful and functional web experiences. With a toolkit that
-          includes HTML, CSS, JavaScript, and React.js, </p>
-          <P>I am dedicated to writing clean code, creating pixel-perfect designs, and delivering exceptional user interfaces. I graduated with a BE in Computer Science Engineering from
-          Mysore district in 2022, and I have a year and a half of experience in
-          the Relevance Lab as a Service Desk Engineer/IT Support.</P>
+          includes HTML, CSS, JavaScript, and React.js, and also i completed my certification in Aws DevOps</p>
+          <P>I am dedicated to writing clean code, creating pixel-perfect designs, and delivering exceptional user interfaces. I graduated with a BE in Information Science Engineering from
+         Yenepoya Institute of Technology, Dakshina kannada district in 2025, and i am a fresher and currently looking for a job</P>
           <P> I am always exploring new technologies and approaches to stay at the forefront of web development.
 
         </p>
@@ -72,16 +89,36 @@
           <img src="./assets/html.svg" alt="">
           <p>HTML</p>
         </div>
+        <div class="skill-card">
+          <img src="./assets/aws.svg" alt="">
+          <p>Aws</p>
+        </div>
       </div>
     </section>
 
-    <section id="projects" data-aos="fade-up">
+    <section id="projects" data-aos="fade-up" >
       <h2>Projects</h2>
       <div class="project-card">
         <h3>Portfolio Website</h3>
         <p>A modern portfolio showcasing my work.</p>
       </div>
+      
+      
+      <div class="project-card">
+        <h3>Sign language and static gesture recognization using computer vision</h3>
+        <p>This is a Machine learning model which is built to recognize deaf and dump people language</p>
+      </div>
+      <div class="project-card">
+        <h3>Course co-ordinator dairy</h3>
+        <p>A web application which is used for college works</p>
+      </div>
+      <div class="project-card">
+        <h3>CI/CD Using Aws DevOps</h3>
+        <p>AWS DevOps CI/CD pipeline automates build, test, and deployment.</p>
+      </div>
+      
     </section>
+    
 
 
     <!-- 
@@ -91,7 +128,7 @@
     Create Access Key here 👉 https://web3forms.com/
  -->
 
-<section class="contact-section">
+<section class="contact-section" id="contact">
   <div class="contact-intro">
     <h2 class="contact-title">Get in Touch</h2>
     <p class="contact-description">
@@ -118,13 +155,15 @@
     <button type="submit" class="submit-btn">Send Message</button>
 </form>
 
-    
+
+
 
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    
   </body>
 </html>    
 

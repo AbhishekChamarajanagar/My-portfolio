@@ -120,11 +120,12 @@ nav a:hover::after, nav a.active::after {
 /* Hero Section */
 #hero {
   text-align: center;
-  padding: 70px 90px;
+  padding: 70px 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70vh;
+  
   
 }
 
@@ -353,4 +354,124 @@ textarea {
   --input-bg: #2a2a2a;
   --accent-color: #ff5733;
   --accent-hover: #e04b29;
+}  
+
+
+
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centers content */
+  text-align: center;
+  gap: 15px;  /* Adds space between elements */
+}
+
+.btn {
+  background-color: #ff5733;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 83, 83, 0.5);
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+.icon-box:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+h1 {
+    margin-bottom: 10px; /* Adjust for spacing */
+}
+
+.subtitle {
+    margin-top: 5px; /* Reduce if needed */
+}
+
+
+
+
+.hero-subtitle {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #080707; /* Slightly muted color for contrast */
+}
+.abhi {
+  font-size: 20px;
+}
+
+.Abhi1{
+  padding-bottom: 3px;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust spacing */
+}
+
+
+
+
+
+.resume-btn {
+  background: #f1e3df;
+  color: rgb(255, 252, 252);
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  background: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 83, 83, 0.5);
+}
+@media (max-width: 768px) {  
+  .navbar {  
+    flex-direction: column; /* Stack navbar items vertically */  
+  }  
+  .hero-section {  
+    flex-direction: column; /* Stack image and text vertically */  
+    text-align: center;  
+  }  
+  .hero-image {  
+    width: 80%; /* Adjust image size for mobile */  
+  }  
 }
