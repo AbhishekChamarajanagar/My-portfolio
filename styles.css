@@ -472,14 +472,18 @@ h1 {
 }
 
 /* Responsive Navigation */
+/* Navbar Fix for Mobile */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: rgba(19, 19, 19, 0.95); /* Darker background */
   }
 
   .nav-links {
-    flex-direction: column;
     display: none;
+    flex-direction: column;
     width: 100%;
     text-align: center;
     background: rgba(19, 19, 19, 0.95);
@@ -487,10 +491,106 @@ h1 {
     top: 60px;
     left: 0;
     padding: 20px;
-    transition: 0.3s ease-in-out;
   }
 
   .nav-links.active {
     display: flex;
   }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+}
+
+/* Hero Section Fix */
+/* Navbar Fix for Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: rgba(19, 19, 19, 0.95); /* Darker background */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: rgba(19, 19, 19, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+}
+
+/* Hero Section Fix */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80vh;
+  padding: 50px 10%;
+  gap: 20px;
+}
+
+.hero-image {
+  max-width: 40%;
+  height: auto;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;  /* Center text */
+    min-height: auto;  /* Adjust height */
+    padding: 30px 5%;
+  }
+
+  .hero-image {
+    max-width: 70%; /* Make image bigger */
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+}
+
+/* About Section Fix */
+#about {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+
+/* About Section Fix */
+#about {
+  padding: 50px 20px;
+  text-align: center;
 }
