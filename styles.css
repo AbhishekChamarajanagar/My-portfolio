@@ -172,7 +172,7 @@ nav a:hover::after, nav a.active::after {
     display: block;
     background-color: #434242;
     border-radius: 30%;
-    margin-right: 40px;
+    margin-right: 100px;
     text-align: center;
   
 }
