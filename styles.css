@@ -138,6 +138,9 @@ nav a:hover::after, nav a.active::after {
   .navbar {
     padding: 15px 20px;
   }
+  #hero{
+   margin-top: 90px;
+  }
 
   .nav-links {
     display: none;
@@ -167,7 +170,12 @@ nav a:hover::after, nav a.active::after {
 
   .hamburger {
     display: block;
-  }
+    background-color: #434242;
+    border-radius: 30%;
+    margin-right: 40px;
+    text-align: center;
+  
+}
 
   .dark-mode .nav-links {
     background: rgba(255, 255, 255, 0.95);
