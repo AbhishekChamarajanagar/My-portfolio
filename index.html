@@ -6,11 +6,10 @@
     <title>Abhishek Nayaka | Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    
   </head>
   <body>
     <header>
-      <nav class="navbar" style="position: fixed">
+      <nav class="navbar">
         <div class="logo">
           <svg width="250" height="50" viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
             <text x="0" y="35" font-size="30" font-weight="bold" fill="currentColor">
@@ -19,23 +18,18 @@
           </svg>
         </div>
         
-        <!-- Hamburger Menu Icon -->
+        <div class="hamburger">&#9776;</div>
       
-          <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-      
-          <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="./assets/AbhishekNayakaKS3.pdf" target="_blank" class="resume-btn">Resume</a></li>
-              <li><button id="theme-toggle">🌙</button></li>
-          </ul>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="./assets/AbhishekNayakaKS3.pdf" target="_blank" class="resume-btn">Resume</a></li>
+          <li><button id="theme-toggle">🌙</button></li>
+        </ul>
       </nav>
-      
-      
     </header>
-    
 
     <section id="hero" data-aos="fade-up">
       <img src="../assets/Hero.svg" height="886px" width="520px" style="padding-right: 100px" />
@@ -45,21 +39,18 @@
         <a href="#projects" class="btn">View Projects</a>
         
         <div class="social-buttons">
-            <a href="https://www.linkedin.com/in/abhishek-nayaka-k-s-9a102225b" target="_blank" class="icon-box">
-                <img src="./assets/linkedin.svg" alt="LinkedIn" class="icon">
-            </a>
-            <a href="https://github.com/AbhishekChamarajanagar" target="_blank" class="icon-box">
-                <img src="./assets/github.svg" alt="GitHub" class="icon">
-            </a>
-            <a href="https://wa.me/6360340277" target="_blank" class="icon-box">
-              <img src="./assets/whatsapp.svg" alt="WhatsApp" class="icon">
+          <a href="https://www.linkedin.com/in/abhishek-nayaka-k-s-9a102225b" target="_blank" class="icon-box">
+            <img src="./assets/linkedin.svg" alt="LinkedIn" class="icon">
+          </a>
+          <a href="https://github.com/AbhishekChamarajanagar" target="_blank" class="icon-box">
+            <img src="./assets/github.svg" alt="GitHub" class="icon">
+          </a>
+          <a href="https://wa.me/6360340277" target="_blank" class="icon-box">
+            <img src="./assets/whatsapp.svg" alt="WhatsApp" class="icon">
           </a>
         </div>
-    </div>
-      
-      
+      </div>
     </section>
-    
 
     <section id="about" data-aos="fade-right">
       <div id="aboutdes">
@@ -71,7 +62,6 @@
           <P>I am dedicated to writing clean code, creating pixel-perfect designs, and delivering exceptional user interfaces. I graduated with a BE in Information Science Engineering from
          Yenepoya Institute of Technology, Dakshina kannada district in 2025, and i am a fresher and currently looking for a job</P>
           <P> I am always exploring new technologies and approaches to stay at the forefront of web development.
-
         </p>
       </div>
       <img class="image" src="../assets/Abhishek yit.jpg"  />
@@ -103,13 +93,13 @@
       </div>
     </section>
 
-    <section id="projects" data-aos="fade-up" >
-      <h2>Projects</h2>
+    <h2 style="text-align: center;">Projects</h2>
+
+    <section id="projects" data-aos="fade-up">
       <div class="project-card">
         <h3>Portfolio Website</h3>
         <p>A modern portfolio showcasing my work.</p>
       </div>
-      
       
       <div class="project-card">
         <h3>Sign language and static gesture recognization using computer vision</h3>
@@ -121,57 +111,41 @@
       </div>
       <div class="project-card">
         <h3>CI/CD Using Aws DevOps</h3>
-        <p>AWS DevOps CI/CD pipeline automates build, test, and deployment.</p>
+        <p>AWS DevOps CI/CD pipeline automates build, test, and deployment.</p>
       </div>
-      
     </section>
-    
 
+    <section class="contact-section" id="contact">
+      <div class="contact-intro">
+        <h2 class="contact-title">Get in Touch</h2>
+        <p class="contact-description">
+          Fill out the form below and we'll get back to you as soon as possible.
+        </p>
+      </div>
 
-    <!-- 
-    This is a working contact form. To receive email, 
-    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
-
-    Create Access Key here 👉 https://web3forms.com/
- -->
-
-<section class="contact-section" id="contact">
-  <div class="contact-intro">
-    <h2 class="contact-title">Get in Touch</h2>
-    <p class="contact-description">
-      Fill out the form below and we'll get back to you as soon as possible.
-    </p>
-  </div>
-
-  <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-
-    <input type="hidden" name="access_key" value="9498dda6-197e-44de-922f-0f258a5db6da">
-    <h2>Contact Me</h2>
-    <div class="input-group">
-        <input type="text" name="name" placeholder="Your Name" required>
-    </div>
-    <div class="input-group">
-        <input type="email" name="email" placeholder="Your Email" required>
-    </div>
-    <div class="input-group">
-        <input type="text" name="phone" placeholder="Phone (Optional)">
-    </div>
-    <div class="input-group">
-        <textarea name="message" placeholder="Your Message" required></textarea>
-    </div>
-    <button type="submit" class="submit-btn">Send Message</button>
-</form>
-
-
-
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="9498dda6-197e-44de-922f-0f258a5db6da">
+        <h2>Contact Me</h2>
+        <div class="input-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="input-group">
+          <input type="text" name="phone" placeholder="Phone (Optional)">
+        </div>
+        <div class="input-group">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
 
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    
   </body>
-</html>    
-
-
+</html>
