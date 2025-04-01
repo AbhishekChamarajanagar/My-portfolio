@@ -472,6 +472,7 @@ h1 {
     line-height: 1.6;
     text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    width: 100%;
   }
 
   /* Content Spacing */
