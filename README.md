@@ -10,3 +10,4 @@ https://my-portfolio-git-main-abhishek-nayaka-k-ss-projects.vercel.app/
 I'm passionate about [mention your areas of interest] and enjoy working on innovative solutions. Feel free to explore my repositories and let's connect!
 
 Thanks for visiting!"
+[Alt text](<Screenshot 2025-04-03 205111.png>)
